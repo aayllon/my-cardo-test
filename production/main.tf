@@ -1,8 +1,8 @@
-#module "ssl-certificate" {
-#  source   = "../modules/ssl-certificate"
-#  domain   = "web.mycardo.com"
-#  zone_id  = "SOMETHING_TO_CHANGE"
-#}
+module "ssl-certificate" {
+  source   = "../modules/ssl-certificate"
+  domain   = "web.mycardo.com"
+  zone_id  = "SOMETHING_TO_CHANGE"
+}
 
 module "s3-bucket" {
   source      = "../modules/s3-bucket"
@@ -59,6 +59,6 @@ module "static_web" {
     cache_policy_id        = "658327ea-f89d-4fab-a63d-7e88639e58f6"
   }
   comment_for_distribution = "CloudFront distribution for Cardo test"
-  #acm_certificate_arn      = module.ssl-certificate.certificate_arn
+  acm_certificate_arn      = module.ssl-certificate.certificate_arn
   price_class              = "PriceClass_100"
 }
