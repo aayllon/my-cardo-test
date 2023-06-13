@@ -101,8 +101,8 @@ resource "aws_cloudfront_distribution" "cardohealth_web" {
     Environment = "testing"
   }
   viewer_certificate {
-    cloudfront_default_certificate = true
-    #acm_certificate_arn = var.acm_certificate_arn
+    #cloudfront_default_certificate = true
+    acm_certificate_arn = var.acm_certificate_arn
   }
   restrictions {
     geo_restriction {

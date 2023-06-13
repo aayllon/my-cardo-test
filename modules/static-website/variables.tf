@@ -87,7 +87,7 @@ variable "price_class" {
   default = null
 }
 
-#variable "acm_certificate_arn" {
-#  type    = string
-#  default = null
-#}
+variable "acm_certificate_arn" {
+  type    = string
+  default = null
+}
