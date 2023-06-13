@@ -58,5 +58,6 @@ I have tried to do the best I could with this test, but I know there are many th
 - Better implementation of the different environment
 - In some cases I know that I broke the DRY principle, for example in the s3 buckets creation.
 - Use user managed keys to encrypt s3 content instead the ones managed by AWS.
+- Use versioned modules
 
 
