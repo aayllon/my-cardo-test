@@ -14,6 +14,7 @@ resource "aws_acm_certificate" "default" {
   lifecycle {
     create_before_destroy   = true
   }
+  tags = var.tags
 }
 resource "aws_route53_record" "validation" {
   zone_id = var.zone_id
