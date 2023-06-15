@@ -2,7 +2,12 @@ module "ssl-certificate" {
   source   = "../modules/ssl-certificate"
   domain   = "web.mycardo.com"
   zone_id  = "SOMETHING_TO_CHANGE"
+  tags = {
+    "environment" = "production"
+    "role"        = "cardo-test"
+  }
 }
+
 
 module "s3-bucket" {
   source      = "../modules/s3-bucket"
@@ -12,7 +17,7 @@ module "s3-bucket" {
   }
   expiration_days = 90
   tags = {
-    "environment" = "development"
+    "environment" = "production"
     "role"        = "cardo-test"
   }
 }
